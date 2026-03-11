@@ -78,4 +78,6 @@ jobs:
           git push origin HEAD:main
 
       - name: Publish to npm (Trusted Publishing)
-        run: npm publish --access public
+        run: npm publish
+        env:
+          NPM_CONFIG_PROVENANCE: true
